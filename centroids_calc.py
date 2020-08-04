@@ -11,7 +11,7 @@ def PrintSimilarities(diction):
 		print("##################################################")
 
 
-#Computes Jaccardi Similarity between two lists
+#Computes percentage of adopters in the promoters between two lists
 
 def JaccSim(lis1, lis2):
 
@@ -26,7 +26,8 @@ def JaccSim(lis1, lis2):
 
 	Jaccardi_Similarity = Numerator/Denominator
 
-	return round(Jaccardi_Similarity, 3)
+	return round(Numerator/len(A)*100, 3)
+	#return round(Jaccardi_Similarity, 3)
 
 
 
@@ -47,63 +48,49 @@ def euclDist(dic1, dic2):
 	return distances
 
 
-
-
-
-
 start_time = time.time()
 
-Gender_centroids1 = {1: [34.763, 65.237],
-					 2: [73.487, 26.513],
-					 3: [5.936, 94.064],
-					 4: [95.939, 4.061],
-					 5: [54.576, 45.424]}
+Gender_centroids1 = { 1: [65.454, 34.546],
+					  2: [7.302, 92.698],
+					  3: [93.219, 6.781],
+					  4: [40.681, 59.319]}
 
-Gender_centroids2 = {1: [35.425, 64.575],
-					 2: [72.925, 27.075],
-					 3: [5.282, 94.718],
-					 4: [94.817, 5.183],
-					 5: [54.583, 45.417]}
+Gender_centroids2 = { 1: [66.659, 33.341],
+					  2: [8.562, 91.438],
+					  3: [91.658, 8.342],
+					  4: [44.014, 55.986]}
 
 print("\nEuclidean Distances: Gender Centroids")
 print(euclDist(Gender_centroids1, Gender_centroids2))
 
 
-Race_centroids1 = { 1: [97.374, 1.26, 1.366],
-					2: [3.496, 95.131, 1.373],
-					3: [56.868, 7.455, 35.677],
-					4: [7.748, 2.292, 89.96],
-					5: [34.443, 52.785, 12.772],
-					6: [63.773, 25.304, 10.924],
-					7: [80.335, 8.674, 10.991]}
+Race_centroids1 = { 1: [47.859, 39.546, 12.594],
+					2: [94.027, 2.995, 2.978],
+					3: [71.914, 11.818, 16.269],
+					4: [13.254, 3.472, 83.274],
+					5: [6.397, 90.761, 2.842]}
 
-Race_centroids2 = { 1: [95.827, 1.95, 2.223],
-					2: [4.218, 94.163, 1.619],
-					3: [50.413, 7.456, 42.131],
-					4: [5.358, 1.445, 93.197],
-					5: [37.786, 49.375, 12.84],
-					6: [65.025, 21.784, 13.191],
-					7: [79.193, 9.506, 11.301]}
+Race_centroids2 = { 1: [49.726, 35.263, 15.011],
+				    2: [92.668, 3.398, 3.934],
+				    3: [73.003, 12.753, 14.245],
+				    4: [11.016, 2.656, 86.328],
+				    5: [7.942, 88.435, 3.623]}
 
 
 print("\nEuclidean Distances: Race Centroids")
 print(euclDist(Race_centroids1, Race_centroids2))
 
-Age_centroids1 = {1: [10.101, 65.432, 23.991],
-				  2: [91.655, 6.352, 1.953], 
-				  3: [1.612, 95.207, 3.097],
-				  4: [1.697, 6.449, 91.776], 
-				  5: [40.963, 49.258, 9.428], 
-				  6: [10.444, 43.142, 44.856],
-				  7: [18.161, 73.198, 8.48]}
+Age_centroids1 = { 1: [9.701, 54.251, 34.995],
+				   2: [82.751, 13.614, 3.528],
+				   3: [21.521, 66.299, 11.921],
+				   4: [2.238, 9.423, 88.202],
+				   5: [3.217, 92.44, 4.243]}
 
-Age_centroids2 = {1: [12.725, 64.458, 22.399],
-				  2: [91.107, 7.369, 1.516], 
-				  3: [1.981, 95.569, 2.421],
-				  4: [1.659, 6.471, 91.838], 
-				  5: [38.56, 52.366, 8.855], 
-				  6: [9.825, 46.397, 42.283],
-				  7: [16.138, 73.256, 10.44]}
+Age_centroids2 = { 1: [11.113, 54.013, 33.891],
+				   2: [81.354, 15.467, 3.127],
+				   3: [19.167, 67.322, 13.279],
+				   4: [2.113, 8.605, 89.101],
+				   5: [3.493, 92.636, 3.807]}
 
 
 print("\nEuclidean Distances: Age Centroids")
@@ -113,9 +100,9 @@ print(euclDist(Age_centroids1, Age_centroids2))
 
 
 
-gend_link = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/Clusters_Demographics/Gender_Clusters.gz'
-race_link = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/Clusters_Demographics/Race_Clusters.gz'
-age_link = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/Clusters_Demographics/Age_Clusters.gz'
+gend_link = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/with Elbow/Clusters_Demographics/Gender_Clusters.gz'
+race_link = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/with Elbow/Clusters_Demographics/Race_Clusters.gz'
+age_link = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/with Elbow/Clusters_Demographics/Age_Clusters.gz'
 
 gen_demo = {}
 rac_demo = {}
@@ -143,9 +130,9 @@ age_demo = json.loads(age_temp)
 
 
 
-gend_link1 = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/Clusters_TrendUsage_Demographics/Gender_Trend_Clusters.gz'
-race_link1 = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/Clusters_TrendUsage_Demographics/Race_Trend_Clusters.gz'
-age_link1 = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/Clusters_TrendUsage_Demographics/Age_Trend_Clusters.gz'
+gend_link1 = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/with Elbow/Clusters_TrendUsage_Demographics/Gender_Trend_Clusters.gz'
+race_link1 = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/with Elbow/Clusters_TrendUsage_Demographics/Race_Trend_Clusters.gz'
+age_link1 = '/Users/WaleedAhmed/Documents/THESIS_DS_CODE/code_cleaning/dataReadCode_2/Code_HashtagsDemographics/with Elbow/Clusters_TrendUsage_Demographics/Age_Trend_Clusters.gz'
 
 gen_tren = {}
 rac_tren = {}
@@ -187,48 +174,38 @@ tren_clus_rac = list(rac_tren.keys())
 tren_clus_age = list(age_tren.keys())
 
 
-Gen_JS[demo_clus_gen[0]+"---"+tren_clus_gen[1]] = JaccSim(gen_demo[demo_clus_gen[0]], gen_tren[tren_clus_gen[1]])
-Gen_JS[demo_clus_gen[1]+"---"+tren_clus_gen[3]] = JaccSim(gen_demo[demo_clus_gen[1]], gen_tren[tren_clus_gen[3]])
-Gen_JS[demo_clus_gen[2]+"---"+tren_clus_gen[2]] = JaccSim(gen_demo[demo_clus_gen[2]], gen_tren[tren_clus_gen[2]])
+Gen_JS[demo_clus_gen[0]+"---"+tren_clus_gen[3]] = JaccSim(gen_demo[demo_clus_gen[0]], gen_tren[tren_clus_gen[3]])
+Gen_JS[demo_clus_gen[1]+"---"+tren_clus_gen[2]] = JaccSim(gen_demo[demo_clus_gen[1]], gen_tren[tren_clus_gen[2]])
+Gen_JS[demo_clus_gen[2]+"---"+tren_clus_gen[1]] = JaccSim(gen_demo[demo_clus_gen[2]], gen_tren[tren_clus_gen[1]])
 Gen_JS[demo_clus_gen[3]+"---"+tren_clus_gen[0]] = JaccSim(gen_demo[demo_clus_gen[3]], gen_tren[tren_clus_gen[0]])
-Gen_JS[demo_clus_gen[4]+"---"+tren_clus_gen[4]] = JaccSim(gen_demo[demo_clus_gen[4]], gen_tren[tren_clus_gen[4]])
 
 
 
-Rac_JS[demo_clus_rac[0]+"---"+tren_clus_rac[0]] = JaccSim(rac_demo[demo_clus_rac[0]], rac_tren[tren_clus_rac[0]])
-Rac_JS[demo_clus_rac[1]+"---"+tren_clus_rac[4]] = JaccSim(rac_demo[demo_clus_rac[1]], rac_tren[tren_clus_rac[4]])
-Rac_JS[demo_clus_rac[2]+"---"+tren_clus_rac[2]] = JaccSim(rac_demo[demo_clus_rac[2]], rac_tren[tren_clus_rac[2]])
-Rac_JS[demo_clus_rac[3]+"---"+tren_clus_rac[3]] = JaccSim(rac_demo[demo_clus_rac[3]], rac_tren[tren_clus_rac[3]])
+Rac_JS[demo_clus_rac[0]+"---"+tren_clus_rac[4]] = JaccSim(rac_demo[demo_clus_rac[0]], rac_tren[tren_clus_rac[4]])
+Rac_JS[demo_clus_rac[1]+"---"+tren_clus_rac[3]] = JaccSim(rac_demo[demo_clus_rac[1]], rac_tren[tren_clus_rac[3]])
+Rac_JS[demo_clus_rac[2]+"---"+tren_clus_rac[0]] = JaccSim(rac_demo[demo_clus_rac[2]], rac_tren[tren_clus_rac[0]])
+Rac_JS[demo_clus_rac[3]+"---"+tren_clus_rac[2]] = JaccSim(rac_demo[demo_clus_rac[3]], rac_tren[tren_clus_rac[2]])
 Rac_JS[demo_clus_rac[4]+"---"+tren_clus_rac[1]] = JaccSim(rac_demo[demo_clus_rac[4]], rac_tren[tren_clus_rac[1]])
-Rac_JS[demo_clus_rac[5]+"---"+tren_clus_rac[5]] = JaccSim(rac_demo[demo_clus_rac[5]], rac_tren[tren_clus_rac[5]])
-Rac_JS[demo_clus_rac[6]+"---"+tren_clus_rac[6]] = JaccSim(rac_demo[demo_clus_rac[6]], rac_tren[tren_clus_rac[6]])
 
 
 
-
-
-
-Age_JS[demo_clus_age[0]+"---"+tren_clus_age[3]] = JaccSim(age_demo[demo_clus_age[0]], age_tren[tren_clus_age[3]])
-Age_JS[demo_clus_age[1]+"---"+tren_clus_age[6]] = JaccSim(age_demo[demo_clus_age[1]], age_tren[tren_clus_age[6]])
-Age_JS[demo_clus_age[2]+"---"+tren_clus_age[5]] = JaccSim(age_demo[demo_clus_age[2]], age_tren[tren_clus_age[5]])
-Age_JS[demo_clus_age[3]+"---"+tren_clus_age[4]] = JaccSim(age_demo[demo_clus_age[3]], age_tren[tren_clus_age[4]])
-Age_JS[demo_clus_age[4]+"---"+tren_clus_age[1]] = JaccSim(age_demo[demo_clus_age[4]], age_tren[tren_clus_age[1]])
-Age_JS[demo_clus_age[5]+"---"+tren_clus_age[2]] = JaccSim(age_demo[demo_clus_age[5]], age_tren[tren_clus_age[2]])
-Age_JS[demo_clus_age[6]+"---"+tren_clus_age[0]] = JaccSim(age_demo[demo_clus_age[6]], age_tren[tren_clus_age[0]])
-
-
+Age_JS[demo_clus_age[0]+"---"+tren_clus_age[1]] = JaccSim(age_demo[demo_clus_age[0]], age_tren[tren_clus_age[1]])
+Age_JS[demo_clus_age[1]+"---"+tren_clus_age[3]] = JaccSim(age_demo[demo_clus_age[1]], age_tren[tren_clus_age[3]])
+Age_JS[demo_clus_age[2]+"---"+tren_clus_age[0]] = JaccSim(age_demo[demo_clus_age[2]], age_tren[tren_clus_age[0]])
+Age_JS[demo_clus_age[3]+"---"+tren_clus_age[2]] = JaccSim(age_demo[demo_clus_age[3]], age_tren[tren_clus_age[2]])
+Age_JS[demo_clus_age[4]+"---"+tren_clus_age[4]] = JaccSim(age_demo[demo_clus_age[4]], age_tren[tren_clus_age[4]])
 
 
 print("##################################################")
-print("\n\nJaccardi Similarity between GENDER Clusters")
+print("\n\nPercentage of Adopters present in the promoters::GENDER CLUSTERS")
 PrintSimilarities(Gen_JS)
 
 print("##################################################")
-print("\n\nJaccardi Similarity between RACE Clusters")
+print("\n\nPercentage of Adopters present in the promoters::RACE CLUSTERS")
 PrintSimilarities(Rac_JS)
 
 print("##################################################")
-print("\n\nJaccardi Similarity between AGE Clusters")
+print("\n\nPercentage of Adopters present in the promoters::AGE")
 PrintSimilarities(Age_JS)
 
 
@@ -236,9 +213,3 @@ PrintSimilarities(Age_JS)
 print("##################################################")
 print("\n\nElapsed Time")
 print("--- %s seconds ---" % (time.time() - start_time))
-
-
-
-
-
-
