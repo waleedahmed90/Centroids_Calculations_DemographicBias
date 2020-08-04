@@ -96,3 +96,74 @@ Elapsed Time
 
 <br/>
 <<<<Author: Waleed Ahmed, Date: (Aug 02, 2020), (Saarbrücken, Deutschland)>>>>
+
+
+Running "python biasCalculations.py" results this on cosole (OUTPUT)
+
+ <GENDER> BASE_DEMOGRAPHIC:  [49.2, 50.8]
+Promoter Cluster Demographics:::  [65.454, 34.546]  --------BIAS=  0.23
+Adopter Cluster Demographics::::  [66.659, 33.341]  --------BIAS=  0.247
+
+
+Promoter Cluster Demographics:::  [7.302, 92.698]  --------BIAS=  0.593
+Adopter Cluster Demographics::::  [8.562, 91.438]  --------BIAS=  0.575
+
+
+Promoter Cluster Demographics:::  [93.219, 6.781]  --------BIAS=  0.623
+Adopter Cluster Demographics::::  [91.658, 8.342]  --------BIAS=  0.6
+
+
+Promoter Cluster Demographics:::  [40.681, 59.319]  --------BIAS=  0.12
+Adopter Cluster Demographics::::  [44.014, 55.986]  --------BIAS=  0.073
+
+
+
+
+ <RACE> BASE_DEMOGRAPHIC:  [72.4, 12.6, 4.8]
+Promoter Cluster Demographics:::  [47.859, 39.546, 12.594]  --------BIAS=  0.373
+Adopter Cluster Demographics::::  [49.726, 35.263, 15.011]  --------BIAS=  0.336
+
+
+Promoter Cluster Demographics:::  [94.027, 2.995, 2.978]  --------BIAS=  0.237
+Adopter Cluster Demographics::::  [92.668, 3.398, 3.934]  --------BIAS=  0.223
+
+
+Promoter Cluster Demographics:::  [71.914, 11.818, 16.269]  --------BIAS=  0.115
+Adopter Cluster Demographics::::  [73.003, 12.753, 14.245]  --------BIAS=  0.095
+
+
+Promoter Cluster Demographics:::  [13.254, 3.472, 83.274]  --------BIAS=  0.987
+Adopter Cluster Demographics::::  [11.016, 2.656, 86.328]  --------BIAS=  1.025
+
+
+Promoter Cluster Demographics:::  [6.397, 90.761, 2.842]  --------BIAS=  1.023
+Adopter Cluster Demographics::::  [7.942, 88.435, 3.623]  --------BIAS=  0.995
+
+
+
+
+ <AGE> BASE_DEMOGRAPHIC:  [18.1, 31.2, 37.7]
+Promoter Cluster Demographics:::  [9.701, 54.251, 34.995]  --------BIAS=  0.247
+Adopter Cluster Demographics::::  [11.113, 54.013, 33.891]  --------BIAS=  0.242
+
+
+Promoter Cluster Demographics:::  [82.751, 13.614, 3.528]  --------BIAS=  0.752
+Adopter Cluster Demographics::::  [81.354, 15.467, 3.127]  --------BIAS=  0.738
+
+
+Promoter Cluster Demographics:::  [21.521, 66.299, 11.921]  --------BIAS=  0.437
+Adopter Cluster Demographics::::  [19.167, 67.322, 13.279]  --------BIAS=  0.436
+
+
+Promoter Cluster Demographics:::  [2.238, 9.423, 88.202]  --------BIAS=  0.572
+Adopter Cluster Demographics::::  [2.113, 8.605, 89.101]  --------BIAS=  0.584
+
+
+Promoter Cluster Demographics:::  [3.217, 92.44, 4.243]  --------BIAS=  0.714
+Adopter Cluster Demographics::::  [3.493, 92.636, 3.807]  --------BIAS=  0.717
+
+
+
+
+Elapsed Time
+--- 0.0005879402160644531 seconds ---
